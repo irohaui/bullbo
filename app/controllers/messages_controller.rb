@@ -46,11 +46,11 @@ class MessagesController < ApplicationController
   private
 
   def set_message
-    @messsage = Message.find(params[:id])
+    @message = Message.find(params[:id])
   end
 
   # Strong Parameter
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:content, :title)
   end
 end
